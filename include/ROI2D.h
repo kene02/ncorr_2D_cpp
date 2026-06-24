@@ -58,7 +58,8 @@ public:
     
     // Operators interface ---------------------------------------------------//
     friend std::ostream& operator<<(std::ostream&, const ROI2D&);  
-    friend void imshow(const ROI2D &roi, difference_type delay = -1) { imshow(*roi.mask_ptr, delay); }  
+    // friend void imshow(const ROI2D &roi, difference_type delay = -1) { imshow(*roi.mask_ptr, delay); }  
+    friend void imshow(const ROI2D &roi, difference_type delay ) { imshow(*roi.mask_ptr, delay); }  
     friend bool isequal(const ROI2D&, const ROI2D&);
     friend void save(const ROI2D&, std::ofstream&);   
     

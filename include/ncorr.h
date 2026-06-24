@@ -309,7 +309,8 @@ struct strain_analysis_output final {
 strain_analysis_output strain_analysis(const strain_analysis_input&);
 
 // Interface functions for viewing and saving ncorr related data -------------//
-void imshow_ncorr_data_over_img(const Image2D&, const Data2D&, ROI2D::difference_type = -1);
+//void imshow_ncorr_data_over_img(const Image2D&, const Data2D&, ROI2D::difference_type = -1);
+void imshow_ncorr_data_over_img(const Image2D&, const Data2D&, ROI2D::difference_type );
 
 void save_ncorr_data_over_img(const std::string&, 
                               const Image2D&, 

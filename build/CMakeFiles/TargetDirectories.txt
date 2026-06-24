@@ -1,0 +1,7 @@
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/ncorr.dir
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/edit_cache.dir
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/rebuild_cache.dir
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/list_install_components.dir
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/install.dir
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/install/local.dir
+/home/kely0001/ja84/Resolution/ncorr_2D_cpp/build/CMakeFiles/install/strip.dir

@@ -35,7 +35,8 @@ extern "C" {                    // Blas - for matrix multiplication
 }  
 #include "fftw3.h"              // For convolution and deconvolution
 #include "opencv2/opencv.hpp"   // For imshow()
-#include "SuiteSparseQR.hpp"    // for in-paint
+// #include "SuiteSparseQR.hpp"    // for in-paint
+#include "suitesparse/SuiteSparseQR.hpp"    // for in-paint
 
 namespace ncorr {          
 
@@ -301,7 +302,8 @@ class Array2D final {
         template <typename T2> 
         friend Array2D<T2, typename allocator_type::template rebind<T2>::other> convert(const Array2D &A, const T2&) { return Array2D<T2, typename allocator_type::template rebind<T2>::other>(A); }
         friend cv::Mat get_cv_img(const Array2D &A, value_type min, value_type max) { return A.this_cv_img(min, max); }
-        friend void imshow(const Array2D &A, difference_type delay = -1) { A.this_imshow(delay); }
+        // friend void imshow(const Array2D &A, difference_type delay = -1) { A.this_imshow(delay); }
+        friend void imshow(const Array2D &A, difference_type delay ) { A.this_imshow(delay); }
         friend std::ostream& operator<<(std::ostream &os, const Array2D &A) { return A.this_stream(os); }      
         friend Array2D repmat(const Array2D &A, difference_type rows, difference_type cols) { return A.this_repmat(rows,cols); }    
         friend Array2D pad(const Array2D &A, difference_type padding, PAD pad_type = PAD::ZEROS) { return A.this_pad(padding,pad_type); }    
