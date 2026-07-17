@@ -5,6 +5,7 @@ PROJECT(ncorr_test)
 # installed, so directories to dependent libraries and their headers are not explicitly 
 # included, since the install directories are searched automatically by g++.
 
+include_directories("/home/kely0001/ja84/Resolution/install/include")
 # Set output for executable
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
 

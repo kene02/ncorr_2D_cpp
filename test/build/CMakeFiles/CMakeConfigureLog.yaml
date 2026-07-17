@@ -1,0 +1,1314 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      The system is: Linux - 5.14.0-611.30.1.el9_7.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: -I/apps/fftw/3.3.10/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/3.29.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: -I/apps/fftw/3.3.10/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/3.29.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/apps/fftw/3.3.10/include"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f56fb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f56fb.dir/build.make CMakeFiles/cmTC_f56fb.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA'
+        Building C object CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -I/apps/fftw/3.3.10/include    -v -o CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_f56fb.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/cc1 -quiet -v -I /apps/fftw/3.3.10/include /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f56fb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64-v2 -version -o /tmp/ccrZywJt.s
+        GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /apps/fftw/3.3.10/include
+         /apps/cuda/12.2.0/include
+         /apps/openblas/0.3.27/include
+         /usr/lib/gcc/x86_64-redhat-linux/11/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: fda500c23ce11a6832dac628f898cd8a
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_f56fb.dir/'
+         as -v -I /apps/fftw/3.3.10/include --64 -o CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o /tmp/ccrZywJt.s
+        GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_f56fb
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f56fb.dir/link.txt --verbose=1
+        /usr/bin/cc -I/apps/fftw/3.3.10/include  -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -v -Wl,-v -rdynamic CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -o cmTC_f56fb
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-L/apps/fftw/3.3.10/lib' '-L/apps/cuda/12.2.0/lib64/stubs' '-L/usr/lib64' '-L/apps/cuda/12.2.0/lib64' '-L/apps/cuda/12.2.0/lib' '-v' '-rdynamic' '-o' 'cmTC_f56fb' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_f56fb.'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7vnSbN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f56fb /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7vnSbN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f56fb /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        GNU ld version 2.35.2-67.el9_7.1
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-L/apps/fftw/3.3.10/lib' '-L/apps/cuda/12.2.0/lib64/stubs' '-L/usr/lib64' '-L/apps/cuda/12.2.0/lib64' '-L/apps/cuda/12.2.0/lib' '-v' '-rdynamic' '-o' 'cmTC_f56fb' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_f56fb.'
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/apps/fftw/3.3.10/include]
+          add: [/apps/cuda/12.2.0/include]
+          add: [/apps/openblas/0.3.27/include]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/apps/fftw/3.3.10/include] ==> [/apps/fftw/3.3.10/include]
+        collapse include dir [/apps/cuda/12.2.0/include] ==> [/apps/cuda/12.2.0/include]
+        collapse include dir [/apps/openblas/0.3.27/include] ==> [/apps/openblas/0.3.27/include]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/apps/fftw/3.3.10/include;/apps/cuda/12.2.0/include;/apps/openblas/0.3.27/include;/usr/lib/gcc/x86_64-redhat-linux/11/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA']
+        ignore line: []
+        ignore line: [Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f56fb/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f56fb.dir/build.make CMakeFiles/cmTC_f56fb.dir/build]
+        ignore line: [gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-PFuSRA']
+        ignore line: [Building C object CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -I/apps/fftw/3.3.10/include    -v -o CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_f56fb.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/cc1 -quiet -v -I /apps/fftw/3.3.10/include /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f56fb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64-v2 -version -o /tmp/ccrZywJt.s]
+        ignore line: [GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /apps/fftw/3.3.10/include]
+        ignore line: [ /apps/cuda/12.2.0/include]
+        ignore line: [ /apps/openblas/0.3.27/include]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: fda500c23ce11a6832dac628f898cd8a]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_f56fb.dir/']
+        ignore line: [ as -v -I /apps/fftw/3.3.10/include --64 -o CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o /tmp/ccrZywJt.s]
+        ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_f56fb]
+        ignore line: [/apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f56fb.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc -I/apps/fftw/3.3.10/include  -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -v -Wl -v -rdynamic CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -o cmTC_f56fb]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-L/apps/fftw/3.3.10/lib' '-L/apps/cuda/12.2.0/lib64/stubs' '-L/usr/lib64' '-L/apps/cuda/12.2.0/lib64' '-L/apps/cuda/12.2.0/lib' '-v' '-rdynamic' '-o' 'cmTC_f56fb' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_f56fb.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7vnSbN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f56fb /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc7vnSbN.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_f56fb] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o]
+          arg [-L/apps/fftw/3.3.10/lib] ==> dir [/apps/fftw/3.3.10/lib]
+          arg [-L/apps/cuda/12.2.0/lib64/stubs] ==> dir [/apps/cuda/12.2.0/lib64/stubs]
+          arg [-L/usr/lib64] ==> dir [/usr/lib64]
+          arg [-L/apps/cuda/12.2.0/lib64] ==> dir [/apps/cuda/12.2.0/lib64]
+          arg [-L/apps/cuda/12.2.0/lib] ==> dir [/apps/cuda/12.2.0/lib]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/apps/fftw/3.3.10/lib] ==> dir [/apps/fftw/3.3.10/lib]
+          arg [-L/apps/cuda/12.2.0/lib64] ==> dir [/apps/cuda/12.2.0/lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7vnSbN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f56fb /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_f56fb.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/apps/fftw/3.3.10/lib] ==> [/apps/fftw/3.3.10/lib]
+        collapse library dir [/apps/cuda/12.2.0/lib64/stubs] ==> [/apps/cuda/12.2.0/lib64/stubs]
+        collapse library dir [/usr/lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/cuda/12.2.0/lib64] ==> [/apps/cuda/12.2.0/lib64]
+        collapse library dir [/apps/cuda/12.2.0/lib] ==> [/apps/cuda/12.2.0/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11] ==> [/usr/lib/gcc/x86_64-redhat-linux/11]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/fftw/3.3.10/lib] ==> [/apps/fftw/3.3.10/lib]
+        collapse library dir [/apps/cuda/12.2.0/lib64] ==> [/apps/cuda/12.2.0/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/apps/fftw/3.3.10/lib;/apps/cuda/12.2.0/lib64/stubs;/usr/lib64;/apps/cuda/12.2.0/lib64;/apps/cuda/12.2.0/lib;/usr/lib/gcc/x86_64-redhat-linux/11;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.35.2-67.el9_7.1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/apps/fftw/3.3.10/include"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a711b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a711b.dir/build.make CMakeFiles/cmTC_a711b.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx'
+        Building CXX object CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -I/apps/fftw/3.3.10/include    -v -o CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_a711b.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/cc1plus -quiet -v -I /apps/fftw/3.3.10/include -D_GNU_SOURCE /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a711b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64-v2 -version -o /tmp/cc1ykpcO.s
+        GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /apps/fftw/3.3.10/include
+         /apps/cuda/12.2.0/include
+         /apps/openblas/0.3.27/include
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+         /usr/lib/gcc/x86_64-redhat-linux/11/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 6853d00618d026aa88cc8c38be95aaf1
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_a711b.dir/'
+         as -v -I /apps/fftw/3.3.10/include --64 -o CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc1ykpcO.s
+        GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_a711b
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a711b.dir/link.txt --verbose=1
+        /usr/bin/c++ -I/apps/fftw/3.3.10/include  -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -v -Wl,-v -rdynamic CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a711b
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-L/apps/fftw/3.3.10/lib' '-L/apps/cuda/12.2.0/lib64/stubs' '-L/usr/lib64' '-L/apps/cuda/12.2.0/lib64' '-L/apps/cuda/12.2.0/lib' '-v' '-rdynamic' '-o' 'cmTC_a711b' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_a711b.'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXgZb25.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a711b /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXgZb25.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a711b /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        GNU ld version 2.35.2-67.el9_7.1
+        COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-L/apps/fftw/3.3.10/lib' '-L/apps/cuda/12.2.0/lib64/stubs' '-L/usr/lib64' '-L/apps/cuda/12.2.0/lib64' '-L/apps/cuda/12.2.0/lib' '-v' '-rdynamic' '-o' 'cmTC_a711b' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_a711b.'
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/apps/fftw/3.3.10/include]
+          add: [/apps/cuda/12.2.0/include]
+          add: [/apps/openblas/0.3.27/include]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/apps/fftw/3.3.10/include] ==> [/apps/fftw/3.3.10/include]
+        collapse include dir [/apps/cuda/12.2.0/include] ==> [/apps/cuda/12.2.0/include]
+        collapse include dir [/apps/openblas/0.3.27/include] ==> [/apps/openblas/0.3.27/include]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11] ==> [/usr/include/c++/11]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux] ==> [/usr/include/c++/11/x86_64-redhat-linux]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/apps/fftw/3.3.10/include;/apps/cuda/12.2.0/include;/apps/openblas/0.3.27/include;/usr/include/c++/11;/usr/include/c++/11/x86_64-redhat-linux;/usr/include/c++/11/backward;/usr/lib/gcc/x86_64-redhat-linux/11/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx']
+        ignore line: []
+        ignore line: [Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a711b/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a711b.dir/build.make CMakeFiles/cmTC_a711b.dir/build]
+        ignore line: [gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-HAuFyx']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -I/apps/fftw/3.3.10/include    -v -o CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_a711b.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/cc1plus -quiet -v -I /apps/fftw/3.3.10/include -D_GNU_SOURCE /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a711b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64-v2 -version -o /tmp/cc1ykpcO.s]
+        ignore line: [GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /apps/fftw/3.3.10/include]
+        ignore line: [ /apps/cuda/12.2.0/include]
+        ignore line: [ /apps/openblas/0.3.27/include]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 6853d00618d026aa88cc8c38be95aaf1]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_a711b.dir/']
+        ignore line: [ as -v -I /apps/fftw/3.3.10/include --64 -o CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc1ykpcO.s]
+        ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-v' '-o' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_a711b]
+        ignore line: [/apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a711b.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++ -I/apps/fftw/3.3.10/include  -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -v -Wl -v -rdynamic CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a711b]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/fftw/3.3.10/lib/:/apps/cuda/12.2.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/fftw/3.3.10/include' '-L/apps/fftw/3.3.10/lib' '-L/apps/cuda/12.2.0/lib64/stubs' '-L/usr/lib64' '-L/apps/cuda/12.2.0/lib64' '-L/apps/cuda/12.2.0/lib' '-v' '-rdynamic' '-o' 'cmTC_a711b' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_a711b.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXgZb25.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a711b /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccXgZb25.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_a711b] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o]
+          arg [-L/apps/fftw/3.3.10/lib] ==> dir [/apps/fftw/3.3.10/lib]
+          arg [-L/apps/cuda/12.2.0/lib64/stubs] ==> dir [/apps/cuda/12.2.0/lib64/stubs]
+          arg [-L/usr/lib64] ==> dir [/usr/lib64]
+          arg [-L/apps/cuda/12.2.0/lib64] ==> dir [/apps/cuda/12.2.0/lib64]
+          arg [-L/apps/cuda/12.2.0/lib] ==> dir [/apps/cuda/12.2.0/lib]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/apps/fftw/3.3.10/lib] ==> dir [/apps/fftw/3.3.10/lib]
+          arg [-L/apps/cuda/12.2.0/lib64] ==> dir [/apps/cuda/12.2.0/lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXgZb25.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a711b /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_a711b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/apps/fftw/3.3.10/lib] ==> [/apps/fftw/3.3.10/lib]
+        collapse library dir [/apps/cuda/12.2.0/lib64/stubs] ==> [/apps/cuda/12.2.0/lib64/stubs]
+        collapse library dir [/usr/lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/cuda/12.2.0/lib64] ==> [/apps/cuda/12.2.0/lib64]
+        collapse library dir [/apps/cuda/12.2.0/lib] ==> [/apps/cuda/12.2.0/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11] ==> [/usr/lib/gcc/x86_64-redhat-linux/11]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/fftw/3.3.10/lib] ==> [/apps/fftw/3.3.10/lib]
+        collapse library dir [/apps/cuda/12.2.0/lib64] ==> [/apps/cuda/12.2.0/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/apps/fftw/3.3.10/lib;/apps/cuda/12.2.0/lib64/stubs;/usr/lib64;/apps/cuda/12.2.0/lib64;/apps/cuda/12.2.0/lib;/usr/lib/gcc/x86_64-redhat-linux/11;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.35.2-67.el9_7.1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:20 (CHECK_CXX_COMPILER_FLAG)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_O3"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-SX5qwy"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-SX5qwy"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/apps/fftw/3.3.10/include"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_O3"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-SX5qwy'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b8515/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b8515.dir/build.make CMakeFiles/cmTC_b8515.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-SX5qwy'
+        Building CXX object CMakeFiles/cmTC_b8515.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_SUPPORTS_O3  -I/apps/fftw/3.3.10/include    -O3 -o CMakeFiles/cmTC_b8515.dir/src.cxx.o -c /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-SX5qwy/src.cxx
+        Linking CXX executable cmTC_b8515
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8515.dir/link.txt --verbose=1
+        /usr/bin/c++ -I/apps/fftw/3.3.10/include  -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib  -rdynamic CMakeFiles/cmTC_b8515.dir/src.cxx.o -o cmTC_b8515
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-SX5qwy'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:81 (FIND_PACKAGE)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-q9k3ro"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-q9k3ro"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/apps/fftw/3.3.10/include"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-q9k3ro'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4a240/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4a240.dir/build.make CMakeFiles/cmTC_4a240.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-q9k3ro'
+        Building C object CMakeFiles/cmTC_4a240.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -I/apps/fftw/3.3.10/include  -o CMakeFiles/cmTC_4a240.dir/src.c.o -c /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-q9k3ro/src.c
+        Linking C executable cmTC_4a240
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a240.dir/link.txt --verbose=1
+        /usr/bin/cc -I/apps/fftw/3.3.10/include  -L/apps/fftw/3.3.10/lib -L/apps/cuda/12.2.0/lib64/stubs -L/usr/lib64 -L/apps/cuda/12.2.0/lib64 -L/apps/cuda/12.2.0/lib  -rdynamic CMakeFiles/cmTC_4a240.dir/src.c.o -o cmTC_4a240
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-q9k3ro'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      The system is: Linux - 5.14.0-611.30.1.el9_7.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: -I/apps/suitesparse/7.7.0-cpu/include/suitesparse;-I/apps/suitesparse/7.7.0-cpu/include;-I/apps/opencv/4.10.0/include/opencv4;-I/apps/opencv/4.10.0/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/3.29.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: -I/apps/suitesparse/7.7.0-cpu/include/suitesparse;-I/apps/suitesparse/7.7.0-cpu/include;-I/apps/opencv/4.10.0/include/opencv4;-I/apps/opencv/4.10.0/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/3.29.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/opencv/4.10.0/lib"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7a6e5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7a6e5.dir/build.make CMakeFiles/cmTC_7a6e5.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3'
+        Building C object CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include    -v -o CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_7a6e5.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/cc1 -quiet -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7a6e5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64-v2 -version -o /tmp/cck1YS0y.s
+        GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /apps/suitesparse/7.7.0-cpu/include/suitesparse
+         /apps/suitesparse/7.7.0-cpu/include
+         /apps/opencv/4.10.0/include/opencv4
+         /apps/opencv/4.10.0/include
+         /apps/openblas/0.3.27/include
+         /usr/lib/gcc/x86_64-redhat-linux/11/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: fda500c23ce11a6832dac628f898cd8a
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_7a6e5.dir/'
+         as -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include --64 -o CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o /tmp/cck1YS0y.s
+        GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_7a6e5
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a6e5.dir/link.txt --verbose=1
+        /usr/bin/cc -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -L/apps/opencv/4.10.0/lib -v -Wl,-v -rdynamic CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -o cmTC_7a6e5
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-L/apps/opencv/4.10.0/lib' '-v' '-rdynamic' '-o' 'cmTC_7a6e5' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_7a6e5.'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwv5dOI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7a6e5 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwv5dOI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7a6e5 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        GNU ld version 2.35.2-67.el9_7.1
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-L/apps/opencv/4.10.0/lib' '-v' '-rdynamic' '-o' 'cmTC_7a6e5' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_7a6e5.'
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/apps/suitesparse/7.7.0-cpu/include/suitesparse]
+          add: [/apps/suitesparse/7.7.0-cpu/include]
+          add: [/apps/opencv/4.10.0/include/opencv4]
+          add: [/apps/opencv/4.10.0/include]
+          add: [/apps/openblas/0.3.27/include]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/apps/suitesparse/7.7.0-cpu/include/suitesparse] ==> [/apps/suitesparse/7.7.0-cpu/include/suitesparse]
+        collapse include dir [/apps/suitesparse/7.7.0-cpu/include] ==> [/apps/suitesparse/7.7.0-cpu/include]
+        collapse include dir [/apps/opencv/4.10.0/include/opencv4] ==> [/apps/opencv/4.10.0/include/opencv4]
+        collapse include dir [/apps/opencv/4.10.0/include] ==> [/apps/opencv/4.10.0/include]
+        collapse include dir [/apps/openblas/0.3.27/include] ==> [/apps/openblas/0.3.27/include]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/apps/suitesparse/7.7.0-cpu/include/suitesparse;/apps/suitesparse/7.7.0-cpu/include;/apps/opencv/4.10.0/include/opencv4;/apps/opencv/4.10.0/include;/apps/openblas/0.3.27/include;/usr/lib/gcc/x86_64-redhat-linux/11/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3']
+        ignore line: []
+        ignore line: [Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7a6e5/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_7a6e5.dir/build.make CMakeFiles/cmTC_7a6e5.dir/build]
+        ignore line: [gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-KuS6p3']
+        ignore line: [Building C object CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include    -v -o CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_7a6e5.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/cc1 -quiet -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7a6e5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64-v2 -version -o /tmp/cck1YS0y.s]
+        ignore line: [GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /apps/suitesparse/7.7.0-cpu/include/suitesparse]
+        ignore line: [ /apps/suitesparse/7.7.0-cpu/include]
+        ignore line: [ /apps/opencv/4.10.0/include/opencv4]
+        ignore line: [ /apps/opencv/4.10.0/include]
+        ignore line: [ /apps/openblas/0.3.27/include]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: fda500c23ce11a6832dac628f898cd8a]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_7a6e5.dir/']
+        ignore line: [ as -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include --64 -o CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o /tmp/cck1YS0y.s]
+        ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_7a6e5]
+        ignore line: [/apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a6e5.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -L/apps/opencv/4.10.0/lib -v -Wl -v -rdynamic CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -o cmTC_7a6e5]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-L/apps/opencv/4.10.0/lib' '-v' '-rdynamic' '-o' 'cmTC_7a6e5' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_7a6e5.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwv5dOI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7a6e5 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccwv5dOI.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_7a6e5] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o]
+          arg [-L/apps/opencv/4.10.0/lib] ==> dir [/apps/opencv/4.10.0/lib]
+          arg [-L/apps/opencv/4.10.0/lib64/../lib64] ==> dir [/apps/opencv/4.10.0/lib64/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/apps/opencv/4.10.0/lib64] ==> dir [/apps/opencv/4.10.0/lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwv5dOI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7a6e5 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_7a6e5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/apps/opencv/4.10.0/lib] ==> [/apps/opencv/4.10.0/lib]
+        collapse library dir [/apps/opencv/4.10.0/lib64/../lib64] ==> [/apps/opencv/4.10.0/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11] ==> [/usr/lib/gcc/x86_64-redhat-linux/11]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/opencv/4.10.0/lib64] ==> [/apps/opencv/4.10.0/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/apps/opencv/4.10.0/lib;/apps/opencv/4.10.0/lib64;/usr/lib/gcc/x86_64-redhat-linux/11;/usr/lib64;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.35.2-67.el9_7.1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/opencv/4.10.0/lib"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ecfd9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ecfd9.dir/build.make CMakeFiles/cmTC_ecfd9.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz'
+        Building CXX object CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include    -v -o CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_ecfd9.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/cc1plus -quiet -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include -D_GNU_SOURCE /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ecfd9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64-v2 -version -o /tmp/ccP8vnpX.s
+        GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /apps/suitesparse/7.7.0-cpu/include/suitesparse
+         /apps/suitesparse/7.7.0-cpu/include
+         /apps/opencv/4.10.0/include/opencv4
+         /apps/opencv/4.10.0/include
+         /apps/openblas/0.3.27/include
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+         /usr/lib/gcc/x86_64-redhat-linux/11/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 6853d00618d026aa88cc8c38be95aaf1
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_ecfd9.dir/'
+         as -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include --64 -o CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccP8vnpX.s
+        GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_ecfd9
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecfd9.dir/link.txt --verbose=1
+        /usr/bin/c++ -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -L/apps/opencv/4.10.0/lib -v -Wl,-v -rdynamic CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ecfd9
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-L/apps/opencv/4.10.0/lib' '-v' '-rdynamic' '-o' 'cmTC_ecfd9' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_ecfd9.'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3CjoxR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ecfd9 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3CjoxR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ecfd9 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        GNU ld version 2.35.2-67.el9_7.1
+        COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-L/apps/opencv/4.10.0/lib' '-v' '-rdynamic' '-o' 'cmTC_ecfd9' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_ecfd9.'
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/apps/suitesparse/7.7.0-cpu/include/suitesparse]
+          add: [/apps/suitesparse/7.7.0-cpu/include]
+          add: [/apps/opencv/4.10.0/include/opencv4]
+          add: [/apps/opencv/4.10.0/include]
+          add: [/apps/openblas/0.3.27/include]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/apps/suitesparse/7.7.0-cpu/include/suitesparse] ==> [/apps/suitesparse/7.7.0-cpu/include/suitesparse]
+        collapse include dir [/apps/suitesparse/7.7.0-cpu/include] ==> [/apps/suitesparse/7.7.0-cpu/include]
+        collapse include dir [/apps/opencv/4.10.0/include/opencv4] ==> [/apps/opencv/4.10.0/include/opencv4]
+        collapse include dir [/apps/opencv/4.10.0/include] ==> [/apps/opencv/4.10.0/include]
+        collapse include dir [/apps/openblas/0.3.27/include] ==> [/apps/openblas/0.3.27/include]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11] ==> [/usr/include/c++/11]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux] ==> [/usr/include/c++/11/x86_64-redhat-linux]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/apps/suitesparse/7.7.0-cpu/include/suitesparse;/apps/suitesparse/7.7.0-cpu/include;/apps/opencv/4.10.0/include/opencv4;/apps/opencv/4.10.0/include;/apps/openblas/0.3.27/include;/usr/include/c++/11;/usr/include/c++/11/x86_64-redhat-linux;/usr/include/c++/11/backward;/usr/lib/gcc/x86_64-redhat-linux/11/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz']
+        ignore line: []
+        ignore line: [Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ecfd9/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_ecfd9.dir/build.make CMakeFiles/cmTC_ecfd9.dir/build]
+        ignore line: [gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-S6sczz']
+        ignore line: [Building CXX object CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include    -v -o CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -c /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_ecfd9.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/cc1plus -quiet -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include -D_GNU_SOURCE /apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ecfd9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64-v2 -version -o /tmp/ccP8vnpX.s]
+        ignore line: [GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /apps/suitesparse/7.7.0-cpu/include/suitesparse]
+        ignore line: [ /apps/suitesparse/7.7.0-cpu/include]
+        ignore line: [ /apps/opencv/4.10.0/include/opencv4]
+        ignore line: [ /apps/opencv/4.10.0/include]
+        ignore line: [ /apps/openblas/0.3.27/include]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-11) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-11)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 6853d00618d026aa88cc8c38be95aaf1]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_ecfd9.dir/']
+        ignore line: [ as -v -I /apps/suitesparse/7.7.0-cpu/include/suitesparse -I /apps/suitesparse/7.7.0-cpu/include -I /apps/opencv/4.10.0/include/opencv4 -I /apps/opencv/4.10.0/include --64 -o CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccP8vnpX.s]
+        ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-v' '-o' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_ecfd9]
+        ignore line: [/apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecfd9.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++ -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -L/apps/opencv/4.10.0/lib -v -Wl -v -rdynamic CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ecfd9]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.5.0 20240719 (Red Hat 11.5.0-11) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/apps/opencv/4.10.0/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/opencv/4.10.0/lib64/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/apps/suitesparse/7.7.0-cpu/include/suitesparse' '-I' '/apps/suitesparse/7.7.0-cpu/include' '-I' '/apps/opencv/4.10.0/include/opencv4' '-I' '/apps/opencv/4.10.0/include' '-L/apps/opencv/4.10.0/lib' '-v' '-rdynamic' '-o' 'cmTC_ecfd9' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_ecfd9.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3CjoxR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ecfd9 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc3CjoxR.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_ecfd9] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o]
+          arg [-L/apps/opencv/4.10.0/lib] ==> dir [/apps/opencv/4.10.0/lib]
+          arg [-L/apps/opencv/4.10.0/lib64/../lib64] ==> dir [/apps/opencv/4.10.0/lib64/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/apps/opencv/4.10.0/lib64] ==> dir [/apps/opencv/4.10.0/lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 11.5.0 20240719 (Red Hat 11.5.0-11)]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3CjoxR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ecfd9 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/apps/opencv/4.10.0/lib -L/apps/opencv/4.10.0/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/opencv/4.10.0/lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -v CMakeFiles/cmTC_ecfd9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/apps/opencv/4.10.0/lib] ==> [/apps/opencv/4.10.0/lib]
+        collapse library dir [/apps/opencv/4.10.0/lib64/../lib64] ==> [/apps/opencv/4.10.0/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11] ==> [/usr/lib/gcc/x86_64-redhat-linux/11]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/opencv/4.10.0/lib64] ==> [/apps/opencv/4.10.0/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/apps/opencv/4.10.0/lib;/apps/opencv/4.10.0/lib64;/usr/lib/gcc/x86_64-redhat-linux/11;/usr/lib64;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (PROJECT)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.35.2-67.el9_7.1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:20 (CHECK_CXX_COMPILER_FLAG)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_O3"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-sphh82"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-sphh82"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/opencv/4.10.0/lib"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_O3"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-sphh82'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5ea20/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5ea20.dir/build.make CMakeFiles/cmTC_5ea20.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-sphh82'
+        Building CXX object CMakeFiles/cmTC_5ea20.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_SUPPORTS_O3  -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include    -O3 -o CMakeFiles/cmTC_5ea20.dir/src.cxx.o -c /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-sphh82/src.cxx
+        Linking CXX executable cmTC_5ea20
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ea20.dir/link.txt --verbose=1
+        /usr/bin/c++ -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -L/apps/opencv/4.10.0/lib  -rdynamic CMakeFiles/cmTC_5ea20.dir/src.cxx.o -o cmTC_5ea20
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-sphh82'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/apps/cmake/3.29.3/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:81 (FIND_PACKAGE)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-4uhGFo"
+      binary: "/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-4uhGFo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include"
+      CMAKE_EXE_LINKER_FLAGS: "-L/apps/opencv/4.10.0/lib"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-4uhGFo'
+        
+        Run Build Command(s): /apps/cmake/3.29.3/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_26508/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_26508.dir/build.make CMakeFiles/cmTC_26508.dir/build
+        gmake[1]: Entering directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-4uhGFo'
+        Building C object CMakeFiles/cmTC_26508.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -o CMakeFiles/cmTC_26508.dir/src.c.o -c /home/kely0001/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-4uhGFo/src.c
+        Linking C executable cmTC_26508
+        /apps/cmake/3.29.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26508.dir/link.txt --verbose=1
+        /usr/bin/cc -I/apps/suitesparse/7.7.0-cpu/include/suitesparse -I/apps/suitesparse/7.7.0-cpu/include -I/apps/opencv/4.10.0/include/opencv4 -I/apps/opencv/4.10.0/include  -L/apps/opencv/4.10.0/lib  -rdynamic CMakeFiles/cmTC_26508.dir/src.c.o -o cmTC_26508
+        gmake[1]: Leaving directory '/fs04/ja84/Resolution/ncorr_2D_cpp/test/build/CMakeFiles/CMakeScratch/TryCompile-4uhGFo'
+        
+      exitCode: 0
+...
