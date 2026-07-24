@@ -1,0 +1,60 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	// Container & project name, *** CHANGE THIS *** name to suit your project
+	"name": "Python & C/C++ Development",
+
+	"dockerComposeFile": "docker-compose.yml",
+
+	// Service name, changeable, must match docker-compose.yml
+	"service": "devcontainer",                 
+
+	// Container working directory, changeable, must match docker-compose.yml
+	"workspaceFolder": "/workspace/app",    
+
+	"overrideCommand": true,
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		// SE some how required for vibe coding as per Google
+		"ghcr.io/devcontainers/features/docker-in-docker:4": {
+			"moby": false
+		}
+		// "ghcr.io/devcontainers/features/python:1": {
+		// 	"version": "latest",
+		// 	"installTools": true
+		// },
+		// "ghcr.io/devcontainers/features/common-utils:2": {
+		// 	"configureZshAsDefaultShell": true
+		// }
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	// "postCreateCommand": "chmod +x .devcontainer/post_create.sh && .devcontainer/post_create.sh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"docker.docker", 
+				"ms-azuretools.vscode-containers", 
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+        		"ms-vscode.cpptools",
+        		"ms-vscode.cpptools-extension-pack",
+        		//"twxs.cmake", // VSCode recommended this to be removed as cmake already have it
+				"ms-toolsai.jupyter"
+				//"saoudrizwan.claude-dev"
+				//"Continue.continue"
+				//"sst-dev.opencode"
+			]
+		}
+	},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
+}
