@@ -1,7 +1,0 @@
-/workspace/app/build/CMakeFiles/ncorr.dir
-/workspace/app/build/CMakeFiles/edit_cache.dir
-/workspace/app/build/CMakeFiles/rebuild_cache.dir
-/workspace/app/build/CMakeFiles/list_install_components.dir
-/workspace/app/build/CMakeFiles/install.dir
-/workspace/app/build/CMakeFiles/install/local.dir
-/workspace/app/build/CMakeFiles/install/strip.dir

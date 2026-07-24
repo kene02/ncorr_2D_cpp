@@ -1,2 +1,0 @@
-/usr/bin/ar qc /workspace/app/lib/libncorr.a CMakeFiles/ncorr.dir/src/ncorr.cpp.o CMakeFiles/ncorr.dir/src/Strain2D.cpp.o CMakeFiles/ncorr.dir/src/Disp2D.cpp.o CMakeFiles/ncorr.dir/src/Data2D.cpp.o CMakeFiles/ncorr.dir/src/ROI2D.cpp.o CMakeFiles/ncorr.dir/src/Image2D.cpp.o CMakeFiles/ncorr.dir/src/Array2D.cpp.o
-/usr/bin/ranlib /workspace/app/lib/libncorr.a
