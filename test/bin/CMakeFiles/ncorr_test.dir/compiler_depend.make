@@ -727,6 +727,7 @@ ncorr_test: /lib/libarmadillo.so.14 \
   /usr/lib/x86_64-linux-gnu/libcolamd.so \
   /usr/lib/x86_64-linux-gnu/libfftw3.so \
   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1 \
+  /usr/lib/x86_64-linux-gnu/libgfortran.so.5 \
   /usr/lib/x86_64-linux-gnu/libgomp.so.1 \
   /usr/lib/x86_64-linux-gnu/liblapack.so \
   /usr/lib/x86_64-linux-gnu/libm.so \
@@ -742,7 +743,6 @@ ncorr_test: /lib/libarmadillo.so.14 \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so \
-  /usr/lib/gcc/x86_64-linux-gnu/14/libgfortran.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
   /usr/lib/x86_64-linux-gnu/libabsl_throw_delegate.so.20240722 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
@@ -780,6 +780,8 @@ ncorr_test: /lib/libarmadillo.so.14 \
 /usr/lib/x86_64-linux-gnu/liblapack.so:
 
 /usr/lib/x86_64-linux-gnu/libgomp.so.1:
+
+/usr/lib/x86_64-linux-gnu/libgfortran.so.5:
 
 /usr/lib/x86_64-linux-gnu/libfftw3.so:
 
@@ -1318,8 +1320,6 @@ ncorr_test: /lib/libarmadillo.so.14 \
 /usr/include/c++/14/bits/list.tcc:
 
 /usr/include/opencv4/opencv2/opencv_modules.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/libgfortran.so:
 
 /usr/include/c++/14/bits/istream.tcc:
 

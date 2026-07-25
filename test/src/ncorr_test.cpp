@@ -26,12 +26,39 @@ int main(int argc, char *argv[]) {
 	} else if (input == "calculate") {
 		// Set images
 		std::vector<Image2D> imgs;
+		/*
 		for (int i = 0; i <= 11; ++i) {
 		    std::ostringstream ostr;
 		    ostr << "images/ohtcfrp_" << std::setfill('0') << std::setw(2) << i << ".png";
 		    imgs.push_back(ostr.str());
 		}
-		
+		*/
+		// Reference image
+		std::ostringstream ostr;
+		ostr << "images/ohtcfrp_00.png";
+		imgs.push_back(ostr.str());
+
+		/*
+		// First loop: 0 to 20 in steps of 5
+		for (int i = 0; i <= 20; i += 5) {
+			std::ostringstream ostr;
+			ostr << "images/ohtcfrp_11_m" << i << "_t90.png";
+			imgs.push_back(ostr.str());
+		}
+
+		// Second loop: 40 to 100 in steps of 20
+		for (int i = 40; i <= 100; i += 20) {
+			std::ostringstream ostr;
+			ostr << "images/ohtcfrp_11_m" << i << "_t90.png";
+			imgs.push_back(ostr.str());
+		}
+		*/
+		ostr.str(""); // Clear previous buffer content
+		ostr.clear(); // Reset error flags
+
+		ostr << "images/ohtcfrp_11.png";
+		imgs.push_back(ostr.str());
+
 		// Set DIC_input
 		DIC_input = DIC_analysis_input(imgs, 							// Images
 				               ROI2D(Image2D("images/roi.png").get_gs() > 0.5),		// ROI
@@ -70,46 +97,47 @@ int main(int argc, char *argv[]) {
 		throw std::invalid_argument("Input of " + input + " is not recognized. Must be either 'calculate' or 'load'");	
 	}		
         
-        // Create Videos ---------------------------------------//
-	// Note that more inputs can be used to modify plots. 
-	// If video is not saving correctly, try changing the 
-	// input codec using cv::VideoWriter::fourcc(...)). Check 
-	// the opencv documentation on video codecs. By default, 
-	// ncorr uses cv::VideoWriter::fourcc('M','J','P','G')).
-        save_DIC_video("video/test_v_eulerian.avi", 
-                       DIC_input, 
-                       DIC_output, 
-                       DISP::V,
-                       0.5,		// Alpha		
-                       15);		// FPS
+    // Get the displacement field you want to access 
+	Disp2D disp = DIC_output.disps.back();  
 
-        save_DIC_video("video/test_u_eulerian.avi", 
-                       DIC_input, 
-                       DIC_output, 
-                       DISP::U, 
-                       0.5,		// Alpha
-                       15);		// FPS
+	// Get the corresponding v and u Array2Ds 
+	const Array2D<double> &v_array = disp.get_v().get_array();  
+	const Array2D<double> &u_array = disp.get_u().get_array();  
 
-        save_strain_video("video/test_eyy_eulerian.avi", 
-                          strain_input, 
-                          strain_output, 
-                          STRAIN::EYY, 
-                          0.5,		// Alpha
-                          15);		// FPS
+	// Get the corresponding ROI2D 
+	ROI2D disp_roi = disp.get_roi(); 
 
-        save_strain_video("video/test_exy_eulerian.avi", 
-                          strain_input, 
-                          strain_output, 
-                          STRAIN::EXY, 
-                          0.5,		// Alpha
-                          15);		// FPS
-        
-        save_strain_video("video/test_exx_eulerian.avi", 
-                          strain_input, 
-                          strain_output, 
-                          STRAIN::EXX, 
-                          0.5,		// Alpha
-                          15); 		// FPS
+	// Cycle over Disp2D and print out values  
+	for (int p2 = 0; p2 < disp.data_width(); ++p2) {  
+		for (int p1 = 0; p1 < disp.data_height(); ++p1) {  
+			if (disp_roi(p1,p2)) {  
+				std::cout << "v(" << p1 << "," << p2 << ") = " << v_array(p1,p2) << std::endl;  
+				std::cout << "u(" << p1 << "," << p2 << ") = " << u_array(p1,p2) << std::endl;  
+			}  
+		}  
+	}  
+
+	// Get the strain field you want to access 
+	Strain2D strain = strain_output.strains.back();  
+
+	// Get the corresponding eyy, exy, and exx Array2Ds 
+	const Array2D<double> &eyy_array = strain.get_eyy().get_array();  
+	const Array2D<double> &exy_array = strain.get_exy().get_array();  
+	const Array2D<double> &exx_array = strain.get_exx().get_array(); 
+
+	// Get the corresponding ROI2D 
+	ROI2D strain_roi = strain.get_roi();  
+
+	// Cycle over Strain2D and print out values  
+	for (int p2 = 0; p2 < strain.data_width(); ++p2) {  
+		for (int p1 = 0; p1 < strain.data_height(); ++p1) {  
+			if (strain_roi(p1,p2)) {  
+				std::cout << "eyy(" << p1 << "," << p2 << ") = " << eyy_array(p1,p2) << std::endl;  
+				std::cout << "exy(" << p1 << "," << p2 << ") = " << exy_array(p1,p2) << std::endl;  
+				std::cout << "exx(" << p1 << "," << p2 << ") = " << exx_array(p1,p2) << std::endl;  
+			}
+		}
+	}
 
   	return 0;
 }
