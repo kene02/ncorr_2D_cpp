@@ -32,6 +32,7 @@ bool save_to_csv(const std::string& filename, const ArrayType& data_array, const
     }
     
     csv_file.close();
+	std::cout << "Successfully exported data to " << filename << std::endl;
     return true;
 }
 
@@ -50,7 +51,14 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 	std::vector<Image2D> imgs;
 	imgs.push_back(ref_image_path);
 	imgs.push_back(cur_image_path);
+	
+	// Find number of hardware threads
+	unsigned int num_threads = std::thread::hardware_concurrency();
+	if (num_threads == 0)
+    	num_threads = 1;
 
+	std::cout << "Using " << num_threads << " thread" << (num_threads == 1 ? "" : "s") << "." << std::endl;
+	
 	// Set DIC_input
 	DIC_input = DIC_analysis_input(imgs, 							// Images
 						ROI2D(Image2D(roi_image_path).get_gs() > 0.5),		// ROI
@@ -58,7 +66,7 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 						INTERP::QUINTIC_BSPLINE_PRECOMPUTE,			// Interpolation
 						SUBREGION::CIRCLE,					// Subregion shape
 						20,                                        		// Subregion radius
-						4,                                         		// # of threads
+						num_threads,            // # of threads
 						DIC_analysis_config::NO_UPDATE,				// DIC configuration for reference image updates
 						true);							// Debugging enabled/disabled
 
