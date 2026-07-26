@@ -135,10 +135,15 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 }
 
 int main() {
-    // Call the function with your specific image paths
-    analyze_dic_and_strain("images/ohtcfrp_00.png", 
-							"images/ohtcfrp_11.png", 
-							"images/roi.png", 
-							"outputs/ohtcfrp_00_vs_ohtcfrp_11_");
+	const std::string roi_path = "images/roi.png";
+
+	for (int i = 1; i <= 11; ++i) {
+		std::string ref_image = "images/ohtcfrp_00_m" + ref_num.str() + "_t90.png";
+        std::string cur_image = "images/ohtcfrp_11_m" + cur_num.str() + "_t90.png";
+		std::string output_prefix = "outputs/ohtcfrp_00_vs_ohtcfrp_11" + cur_num.str() + "_";
+		
+		// Call the function with your specific image paths
+		analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
+	}
     return 0;
 }
