@@ -1,8 +1,39 @@
 #include "ncorr.h"
 #include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace ncorr;
+
+// Reusable template function to save arrays to CSV
+template <typename ArrayType, typename RoiType>
+bool save_to_csv(const std::string& filename, const ArrayType& data_array, const RoiType& disp_roi, int height, int width) {
+    std::ofstream csv_file(filename);
+    if (!csv_file.is_open()) {
+        std::cerr << "Error: Could not open " << filename << " for writing.\n";
+        return false;
+    }
+
+    for (int p1 = 0; p1 < height; ++p1) {
+        for (int p2 = 0; p2 < width; ++p2) {
+            // Write data or NaN replacement
+            if (disp_roi(p1, p2)) {
+                csv_file << data_array(p1, p2);
+            } else {
+                csv_file << "nan";
+            }
+
+            // Write comma for all elements except the last one in the row
+            if (p2 < width - 1) {
+                csv_file << ",";
+            }
+        }
+        csv_file << "\n";
+    }
+    
+    csv_file.close();
+    return true;
+}
 
 int main() {
 	// Initialize DIC and strain information ---------------//
@@ -65,53 +96,13 @@ int main() {
 	// Get the corresponding ROI2D 
 	ROI2D disp_roi = disp.get_roi(); 
 
-	// Cycle over Disp2D and print out values  
-	for (int p2 = 0; p2 < disp.data_width(); ++p2) {  
-		for (int p1 = 0; p1 < disp.data_height(); ++p1) {  
-			if (disp_roi(p1,p2)) {  
-				std::cout << "v(" << p1 << "," << p2 << ") = " << v_array(p1,p2) << std::endl;  
-				std::cout << "u(" << p1 << "," << p2 << ") = " << u_array(p1,p2) << std::endl;  
-			}  
-		}  
-	}  
-	// Open the CSV files for writing
-	std::ofstream csv_file("outputs/u.csv");
-	if (csv_file.is_open()) {
-		// Cycle over Disp2D and save values 
-		for (int p1 = 0; p1 < disp.data_height(); ++p1) { 
-			for (int p2 = 0; p2 < disp.data_width(); ++p2) { 
-				if (disp_roi(p1, p2)) { 
-					csv_file << u_array(p1, p2);
-				} else {
-					csv_file << "nan";
-				}
-				csv_file << ",";
-			}
-			csv_file << "\n";
-		}
-		csv_file.close();
-	} else {
-		std::cerr << "Error: Could not open outputs/u.csv for writing." << std::endl;
-	}
+	// Get data height and width
+	int height = disp.data_height();
+	int width = disp.data_width();
 
-	std::ofstream csv_file("outputs/v.csv");
-	if (csv_file.is_open()) {
-		// Cycle over Disp2D and save values 
-		for (int p1 = 0; p1 < disp.data_height(); ++p1) { 
-			for (int p2 = 0; p2 < disp.data_width(); ++p2) { 
-				if (disp_roi(p1, p2)) { 
-					csv_file << v_array(p1, p2);
-				} else {
-					csv_file << "nan";
-				}
-				csv_file << ",";
-			}
-			csv_file << "\n";
-		}
-		csv_file.close();
-	} else {
-		std::cerr << "Error: Could not open outputs/v.csv for writing." << std::endl;
-	}
+	// Call the function for both u and v arrays
+	save_to_csv("outputs/u.csv", u_array, disp_roi, height, width);
+	save_to_csv("outputs/v.csv", v_array, disp_roi, height, width);
 
 	// Get the strain field you want to access 
 	Strain2D strain = strain_output.strains.back();  
@@ -123,17 +114,15 @@ int main() {
 
 	// Get the corresponding ROI2D 
 	ROI2D strain_roi = strain.get_roi();  
+	
+	// Get data height and width
+	height = strain.data_height();
+	width = strain.data_width();
 
-	// Cycle over Strain2D and print out values  
-	for (int p2 = 0; p2 < strain.data_width(); ++p2) {  
-		for (int p1 = 0; p1 < strain.data_height(); ++p1) {  
-			if (strain_roi(p1,p2)) {  
-				std::cout << "eyy(" << p1 << "," << p2 << ") = " << eyy_array(p1,p2) << std::endl;  
-				std::cout << "exy(" << p1 << "," << p2 << ") = " << exy_array(p1,p2) << std::endl;  
-				std::cout << "exx(" << p1 << "," << p2 << ") = " << exx_array(p1,p2) << std::endl;  
-			}
-		}
-	}
+	// Call the function for eyy, exy, and exx arrays
+	save_to_csv("outputs/eyy.csv", eyy_array, strain_roi, height, width);
+	save_to_csv("outputs/exy.csv", exy_array, strain_roi, height, width);
+	save_to_csv("outputs/exx.csv", exx_array, strain_roi, height, width);
 
   	return 0;
 }
