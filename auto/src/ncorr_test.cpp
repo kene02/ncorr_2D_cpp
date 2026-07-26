@@ -35,7 +35,11 @@ bool save_to_csv(const std::string& filename, const ArrayType& data_array, const
     return true;
 }
 
-int main() {
+// Function that performs DIC and strain analysis on two input image paths and saves fields to CSV
+bool analyze_dic_and_strain(const std::string& ref_image_path, 
+                            const std::string& cur_image_path, 
+                            const std::string& roi_image_path,
+							const std::string& output_base) {
 	// Initialize DIC and strain information ---------------//
 	DIC_analysis_input DIC_input;
 	DIC_analysis_output DIC_output;
@@ -44,22 +48,12 @@ int main() {
 
 	// Set images
 	std::vector<Image2D> imgs;
-
-	// Reference image
-	std::ostringstream ostr;
-	ostr << "images/ohtcfrp_00.png";
-	imgs.push_back(ostr.str());
-
-	ostr.str(""); // Clear previous buffer content
-	ostr.clear(); // Reset error flags
-
-	// Current image
-	ostr << "images/ohtcfrp_11.png";
-	imgs.push_back(ostr.str());
+	imgs.push_back(ref_image_path);
+	imgs.push_back(cur_image_path);
 
 	// Set DIC_input
 	DIC_input = DIC_analysis_input(imgs, 							// Images
-						ROI2D(Image2D("images/roi.png").get_gs() > 0.5),		// ROI
+						ROI2D(Image2D(roi_image_path).get_gs() > 0.5),		// ROI
 						3,                                         		// scalefactor
 						INTERP::QUINTIC_BSPLINE_PRECOMPUTE,			// Interpolation
 						SUBREGION::CIRCLE,					// Subregion shape
@@ -79,9 +73,9 @@ int main() {
 
 	// Set strain input
 	strain_input = strain_analysis_input(DIC_input,
-											DIC_output,
-											SUBREGION::CIRCLE,					// Strain subregion shape
-											5);						// Strain subregion radius
+										DIC_output,
+										SUBREGION::CIRCLE,					// Strain subregion shape
+										5);						// Strain subregion radius
 	
 	// Perform strain_analysis
 	strain_output = strain_analysis(strain_input); 	
@@ -101,8 +95,8 @@ int main() {
 	int width = disp.data_width();
 
 	// Call the function for both u and v arrays
-	save_to_csv("outputs/u.csv", u_array, disp_roi, height, width);
-	save_to_csv("outputs/v.csv", v_array, disp_roi, height, width);
+	save_to_csv(output_base+"u.csv", u_array, disp_roi, height, width);
+	save_to_csv(output_base+"v.csv", v_array, disp_roi, height, width);
 
 	// Get the strain field you want to access 
 	Strain2D strain = strain_output.strains.back();  
@@ -120,9 +114,18 @@ int main() {
 	width = strain.data_width();
 
 	// Call the function for eyy, exy, and exx arrays
-	save_to_csv("outputs/eyy.csv", eyy_array, strain_roi, height, width);
-	save_to_csv("outputs/exy.csv", exy_array, strain_roi, height, width);
-	save_to_csv("outputs/exx.csv", exx_array, strain_roi, height, width);
+	save_to_csv(output_base+"eyy.csv", eyy_array, strain_roi, height, width);
+	save_to_csv(output_base+"exy.csv", exy_array, strain_roi, height, width);
+	save_to_csv(output_base+"exx.csv", exx_array, strain_roi, height, width);
 
-  	return 0;
+  	return true;
+}
+
+int main() {
+    // Call the function with your specific image paths
+    analyze_dic_and_strain("images/ohtcfrp_00.png", 
+							"images/ohtcfrp_11.png", 
+							"images/roi.png", 
+							"outputs/ohtcfrp_00_vs_ohtcfrp_11_");
+    return 0;
 }
