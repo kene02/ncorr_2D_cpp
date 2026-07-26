@@ -137,10 +137,16 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 int main() {
 	const std::string roi_path = "images/roi.png";
 
-	for (int i = 1; i <= 11; ++i) {
-		std::string ref_image = "images/ohtcfrp_00_m" + ref_num.str() + "_t90.png";
-        std::string cur_image = "images/ohtcfrp_11_m" + cur_num.str() + "_t90.png";
-		std::string output_prefix = "outputs/ohtcfrp_00_vs_ohtcfrp_11" + cur_num.str() + "_";
+	for (int m = 0; m <= 100; m += 5) {
+		std::string ref_image =
+            "images/ohtcfrp_00_m" + std::to_string(m) + "_t90.png";
+
+        std::string cur_image =
+            "images/ohtcfrp_11_m" + std::to_string(m) + "_t90.png";
+
+        std::string output_prefix =
+            "outputs/ohtcfrp_00_m" + std::to_string(m) +
+            "_t90_vs_ohtcfrp_11_m" + std::to_string(m) + "_t90_";
 		
 		// Call the function with your specific image paths
 		analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
