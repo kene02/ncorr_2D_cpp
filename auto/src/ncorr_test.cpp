@@ -137,19 +137,49 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 int main() {
 	const std::string roi_path = "images/roi.png";
 
-	for (int m = 0; m <= 100; m += 5) {
-		std::string ref_image =
-            "images/ohtcfrp_00_m" + std::to_string(m) + "_t90.png";
+	// Define the specific list of angles to iterate through
+    const std::vector<int> angles = {0, 5, 15, 30, 45, 60, 75, 85};
+	const std::vector<int> angles2 = {0, 5, 15, 30, 45, 60, 75, 85, 90};
 
-        std::string cur_image =
-            "images/ohtcfrp_11_m" + std::to_string(m) + "_t90.png";
+    for (int m = 5; m <= 100; m += 5) {
+		for (int t : angles) {
+			std::string suffix = "_t" + std::to_string(t) + ".png";
 
-        std::string output_prefix =
-            "outputs/ohtcfrp_00_m" + std::to_string(m) +
-            "_t90_vs_ohtcfrp_11_m" + std::to_string(m) + "_t90_";
-		
-		// Call the function with your specific image paths
-		analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
+			std::string ref_image =
+				"images/ohtcfrp_00_m" + std::to_string(m) + suffix;
+
+			std::string cur_image =
+				"images/ohtcfrp_11_m" + std::to_string(m) + suffix;
+
+			std::string output_prefix =
+				"outputs/ohtcfrp_00_m" + std::to_string(m) + "_t" + std::to_string(t) +
+				"_vs_ohtcfrp_11_m" + std::to_string(m) + "_t" + std::to_string(t) + "_";
+			
+			// std::cout << output_prefix << std::endl;
+			// Call the function with your specific image paths
+			analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
+		}
 	}
+	
+	for (int m = 5; m <= 100; m += 5) {
+		for (int t : angles2) {
+			std::string suffix = "_t" + std::to_string(t) + ".png";
+
+			std::string ref_image =
+				"images/ohtcfrp_00_m0_t0.png";
+
+			std::string cur_image =
+				"images/ohtcfrp_11_m" + std::to_string(m) + suffix;
+
+			std::string output_prefix =
+				"outputs/ohtcfrp_00_m0_t0_vs_ohtcfrp_11_m" + 
+				std::to_string(m) + "_t" + std::to_string(t) + "_";
+			
+			// std::cout << output_prefix << std::endl;
+			// Call the function with your specific image paths
+			analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
+		}
+	}
+
     return 0;
 }

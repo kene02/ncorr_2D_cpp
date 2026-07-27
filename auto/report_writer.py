@@ -13,13 +13,17 @@ LaTeX report.
 """
 
 # %%
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage.metrics import peak_signal_noise_ratio as psnr
 from skimage.metrics import structural_similarity as ssim
 from pathlib import Path
 import csv
+import shutil
 
+# %%
+print(os.getcwd())
 
 # %%
 def plot_csv(csv_path, save_path, title, vmin=None, vmax=None):
@@ -130,6 +134,9 @@ in_dir = './bin/outputs/'
 # Reference dataset
 ref_base = 'ohtcfrp_00_vs_ohtcfrp_11_'
 
+# Export plots
+export_plots = False
+
 # Directory for output plots
 out_dir = './report/dic-plots/'
 
@@ -179,12 +186,13 @@ out_str = r"""\documentclass[a4paper, 8pt, twoside]{article}
 # %%
 # Include true plots
 # Export plots as PNGs
-"""for i in range(5):
-    plot_csv(in_dir+ref_base+PARAMS[i]+'.csv', 
-            out_dir+ref_base+PARAMS[i]+'.png', 
-            TITLES[i], 
-            RANGES[i][0], 
-            RANGES[i][1])"""
+if export_plots:
+    for i in range(5):
+        plot_csv(in_dir+ref_base+PARAMS[i]+'.csv', 
+                out_dir+ref_base+PARAMS[i]+'.png', 
+                TITLES[i], 
+                RANGES[i][0], 
+                RANGES[i][1])
 
 # Write LaTeX code for including plots
 out_str += r"""\section{Unblurred Reference vs Unblurred Current (True Plots)}
@@ -215,13 +223,14 @@ for j in range(len(ref_m)):
     # Progress
     print(f"[{j+1}/{len(ref_m)}] Processing {base[:-1]}")
     
-    """# Export plots as PNGs
-    for i in range(5):
-        plot_csv(in_dir+base+PARAMS[i]+'.csv', 
-                out_dir+base+PARAMS[i]+'.png', 
-                TITLES[i], 
-                RANGES[i][0], 
-                RANGES[i][1])"""
+    # Export plots as PNGs
+    if export_plots:
+        for i in range(5):
+            plot_csv(in_dir+base+PARAMS[i]+'.csv', 
+                    out_dir+base+PARAMS[i]+'.png', 
+                    TITLES[i], 
+                    RANGES[i][0], 
+                    RANGES[i][1])
 
     # Write LaTeX code for including plots
     out_str += rf"""\section{{Reference (${ref_m[j]}\angle\ang{{{ref_t[j]}}}$ Motion Blur) vs Current (${cur_m[j]}\angle\ang{{{cur_t[j]}}}$ Motion Blur)}}
@@ -299,3 +308,7 @@ with open(csv_path, 'w', newline='', encoding='utf-8') as file:
     
 print("Successfully created "+csv_path)
 
+# %%
+# Zip report folder
+shutil.make_archive("report", "zip", "report/")
+print("Successfully created report.zip")
