@@ -21,11 +21,6 @@ from skimage.metrics import structural_similarity as ssim
 from pathlib import Path
 import csv
 import shutil
-import time
-
-# %%
-# For timing run time
-start_time = time.time()
 
 # %%
 print(os.getcwd())
@@ -163,60 +158,14 @@ TITLES = ('u displacement', 'v displacement', 'exx strain', 'exy strain', 'eyy s
 LATEX_TITLES = ('$u$ displacement', '$v$ displacement', '$e_{xx}$ strain', '$e_{xy}$ strain', '$e_{yy}$ strain')
 RANGES = (u_range, v_range, exx_range, exy_range, eyy_range)
 
-# %%
-# Create output folders if they don't already exist
-Path("report").mkdir(parents=True, exist_ok=True)
-Path("report/dic-plots").mkdir(parents=True, exist_ok=True)
 
 # %%
-# LaTeX output string
-out_str = r"""\documentclass[a4paper, 8pt, twoside]{article}
-\usepackage[left=1in, top=1in, bottom=1in, right=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{siunitx}
-\usepackage{subcaption}
-\title{DIC Report---Blurry Reference vs Blurry Current, 90 Degrees}
-\author{Ken Ely}
-\date{27 July 2026}
-
-\begin{document}
-
-\maketitle
-
-\tableofcontents
-\newpage
-
 """
-
-# %%
-# Include true plots
-# Export plots as PNGs
-if export_plots:
-    for i in range(5):
-        plot_csv(in_dir+ref_base+PARAMS[i]+'.csv', 
-                out_dir+ref_base+PARAMS[i]+'.png', 
-                TITLES[i], 
-                RANGES[i][0], 
-                RANGES[i][1])
-
-# Write LaTeX code for including plots
-out_str += r"""\section{Unblurred Reference vs Unblurred Current (True Plots)}
-\begin{minipage}{\textwidth}
-"""
-for i in range(5):
-    out_str += r"\includegraphics[height=125pt]{"
-    out_str += "dic-plots/"+ref_base+PARAMS[i]+".png}\n"
-
-out_str += r"""\end{minipage}
-
-"""
-
-
-# %%
-"""ref_m = np.arange(5, 105, 5)
+ref_m = np.arange(5, 105, 5)
 ref_t = np.full(20, 90)
 cur_m = np.arange(5, 105, 5)
-cur_t = np.full(20, 90)"""
+cur_t = np.full(20, 90)
+"""
 
 magnitudes = range(5, 105, 5)
 angles = [0, 5, 15, 30, 45, 60, 75, 85, 90]
@@ -239,106 +188,8 @@ for m in magnitudes:
         cur_m.append(m)
         cur_t.append(t)
 
-# CSV file values
-csv_values = []
-
 for j in range(len(ref_m)):
     # Target dataset
     base = f'ohtcfrp_00_m{ref_m[j]}_t{ref_t[j]}_vs_ohtcfrp_11_m{cur_m[j]}_t{cur_t[j]}_'
-
     # Progress
     print(f"[{j+1}/{len(ref_m)}] Processing {base[:-1]}")
-    
-    # Export plots as PNGs
-    if export_plots:
-        for i in range(5):
-            plot_csv(in_dir+base+PARAMS[i]+'.csv', 
-                    out_dir+base+PARAMS[i]+'.png', 
-                    TITLES[i], 
-                    RANGES[i][0], 
-                    RANGES[i][1])
-
-    # Write LaTeX code for including plots
-    out_str += rf"""\section{{Reference (${ref_m[j]}\angle\ang{{{ref_t[j]}}}$ Motion Blur) vs Current (${cur_m[j]}\angle\ang{{{cur_t[j]}}}$ Motion Blur)}}
-\begin{{minipage}}{{\textwidth}}
-"""
-    for i in range(5):
-        out_str += r"\includegraphics[height=125pt]{"
-        out_str += "dic-plots/"+base+PARAMS[i]+".png}\n"
-
-    out_str += r"""
-\vspace{12pt}
-
-"""
-
-    ssims = []
-    psnrs = []
-    for i in range(5):
-        # Evaluate SSIM and PSNR
-        ssim_val, psnr_val = ssim_psnr(in_dir+ref_base+PARAMS[i]+'.csv', 
-                                    in_dir+base+PARAMS[i]+'.csv', 
-                                    u_range)
-        
-        # Put SSIM and PSNR into lists
-        ssims.append(ssim_val)
-        psnrs.append(psnr_val)
-        
-    # Add new row to CSV values
-    csv_values.append([ref_m[j], ref_t[j], cur_m[j], cur_t[j]]+ssims+psnrs)
-        
-    # Generate LaTeX table
-    out_str += r"""\centering
-\begin{tabular}{|l|S[table-format=1.4]|S|}
-\hline
-\textbf{Plot} & {\textbf{SSIM}} & {\textbf{PSNR} (dB)} \\ \hline
-"""
-    
-    # Put SSIM and PSNR values into the LaTeX table
-    for i in range(5):
-        out_str += f"{LATEX_TITLES[i]} & {ssims[i]:.4f} & {psnrs[i]:.4f} \\\\"
-        if i != 4:
-            out_str += "\n"
-            
-    out_str += r""" \hline
-\end{tabular}
-\end{minipage}
-
-"""
-
-# End LaTeX document
-out_str += r"\end{document}"
-
-
-# %%
-# Write .tex file
-with open(tex_path, "w", encoding="utf-8") as file:
-    file.write(out_str)
-
-print("Successfully created "+tex_path)
-
-# %%
-# Write .csv file
-header = ["Ref_Motion_Blur_Magnitude", "Ref_Motion_Blur_Direction",
-    "Current_Motion_Blur_Magnitude", "Current_Motion_Blur_Direction", 
-    "SSIM_u", "SSIM_v", "SSIM_exx", "SSIM_exy", "SSIM_eyy", 
-    "PSNR_u", "PSNR_v", "PSNR_exx", "PSNR_exy", "PSNR_eyy"]
-
-with open(csv_path, 'w', newline='', encoding='utf-8') as file:
-    writer = csv.writer(file)
-    
-    # Write the header row
-    writer.writerow(header)
-    
-    # Write multiple data rows at once
-    writer.writerows(csv_values)
-    
-print("Successfully created "+csv_path)
-
-# %%
-# Zip report folder
-shutil.make_archive("report", "zip", "report/")
-print("Successfully created report.zip")
-
-# %%
-# Time elapsed
-print("--- %s seconds ---" % (time.time() - start_time))

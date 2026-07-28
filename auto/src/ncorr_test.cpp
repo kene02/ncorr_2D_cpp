@@ -1,5 +1,7 @@
 #include "ncorr.h"
 #include <fstream>
+#include <sstream>
+#include <vector>
 #include <iostream>
 #include <string>
 
@@ -134,52 +136,75 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 	}
 }
 
+// Helper function to trim whitespaces, quotes, or line breaks from CSV cells
+std::string clean_string(std::string str) {
+    // 1. Remove trailing carriage returns (\r), newlines (\n), and whitespace
+    size_t last = str.find_last_not_of(" \t\n\r");
+    if (last != std::string::npos) {
+        str.erase(last + 1);
+    } else {
+        str.clear(); // String was entirely whitespace/newlines
+    }
+
+    // 2. Remove leading whitespace if needed
+    size_t first = str.find_first_not_of(" \t");
+    if (first != std::string::npos && first > 0) {
+        str.erase(0, first);
+    }
+
+    // 3. Strip surrounding quotes
+    if (!str.empty() && (str.front() == '"' || str.front() == '\'')) str.erase(0, 1);
+    if (!str.empty() && (str.back() == '"' || str.back() == '\'')) str.pop_back();
+    
+    return str;
+}
+
 int main() {
-	const std::string roi_path = "images/roi.png";
+	// Path to CSV file listing image paths 
+	const std::string csv_path = "../image_paths.csv";
+    std::ifstream file(csv_path);
 
-	// Define the specific list of angles to iterate through
-    const std::vector<int> angles = {0, 5, 15, 30, 45, 60, 75, 85};
-	const std::vector<int> angles2 = {0, 5, 15, 30, 45, 60, 75, 85, 90};
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open the file " << csv_path << std::endl;
+        return 1;
+    }
 
-    for (int m = 5; m <= 100; m += 5) {
-		for (int t : angles) {
-			std::string suffix = "_t" + std::to_string(t) + ".png";
+    std::string line;
+    bool is_header = true; // Set to false if your CSV does not have a header row
 
-			std::string ref_image =
-				"images/ohtcfrp_00_m" + std::to_string(m) + suffix;
+    while (std::getline(file, line)) {
+        // Skip empty lines
+        if (line.empty()) continue;
 
-			std::string cur_image =
-				"images/ohtcfrp_11_m" + std::to_string(m) + suffix;
+        // Skip the header row
+        if (is_header) {
+            is_header = false;
+            continue;
+        }
 
-			std::string output_prefix =
-				"outputs/ohtcfrp_00_m" + std::to_string(m) + "_t" + std::to_string(t) +
-				"_vs_ohtcfrp_11_m" + std::to_string(m) + "_t" + std::to_string(t) + "_";
-			
-			// std::cout << output_prefix << std::endl;
-			// Call the function with your specific image paths
-			analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
-		}
-	}
-	
-	for (int m = 5; m <= 100; m += 5) {
-		for (int t : angles2) {
-			std::string suffix = "_t" + std::to_string(t) + ".png";
+        std::stringstream ss(line);
+        std::string ref_image, cur_image, roi_path, output_prefix;
 
-			std::string ref_image =
-				"images/ohtcfrp_00_m0_t0.png";
+        // Parse comma-separated fields
+        if (std::getline(ss, ref_image, ',') &&
+            std::getline(ss, cur_image, ',') &&
+            std::getline(ss, roi_path, ',') &&
+            std::getline(ss, output_prefix, ',')) {
 
-			std::string cur_image =
-				"images/ohtcfrp_11_m" + std::to_string(m) + suffix;
+            // Clean any accidental quotes around strings
+            ref_image = clean_string(ref_image);
+            cur_image = clean_string(cur_image);
+            roi_path = clean_string(roi_path);
+            output_prefix = clean_string(output_prefix);
 
-			std::string output_prefix =
-				"outputs/ohtcfrp_00_m0_t0_vs_ohtcfrp_11_m" + 
-				std::to_string(m) + "_t" + std::to_string(t) + "_";
-			
-			// std::cout << output_prefix << std::endl;
-			// Call the function with your specific image paths
-			analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
-		}
-	}
+            // Execute the analysis function
+			//std::cout << output_prefix << std::endl;
+            analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
+        } else {
+            std::cerr << "Warning: Skipping malformed line -> " << line << std::endl;
+        }
+    }
 
+    file.close();
     return 0;
 }
