@@ -159,8 +159,11 @@ exy_range = (-2e-3, 2e-3)
 eyy_range = (5e-3, 10e-3)
 
 PARAMS = ('u', 'v', 'exx', 'exy', 'eyy')
-TITLES = ('u displacement', 'v displacement', 'exx strain', 'exy strain', 'eyy strain')
-LATEX_TITLES = ('$u$ displacement', '$v$ displacement', '$e_{xx}$ strain', '$e_{xy}$ strain', '$e_{yy}$ strain')
+TITLES = (r'$u$ displacement', 
+          r'$v$ displacement', 
+          r'$\epsilon_{xx}$ strain', 
+          r'$\epsilon_{xy}$ strain', 
+          r'$\epsilon_{yy}$ strain')
 RANGES = (u_range, v_range, exx_range, exy_range, eyy_range)
 
 # %%
@@ -170,11 +173,13 @@ Path("report/dic-plots").mkdir(parents=True, exist_ok=True)
 
 # %%
 # LaTeX output string
-out_str = r"""\documentclass[a4paper, 8pt, twoside]{article}
+out_str = r"""\documentclass[a4paper, 10pt, twoside]{article}
 \usepackage[left=1in, top=1in, bottom=1in, right=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{subcaption}
+\usepackage{hyperref}
+
 \title{DIC Report---Blurry Reference vs Blurry Current, 90 Degrees}
 \author{Ken Ely}
 \date{27 July 2026}
@@ -202,12 +207,14 @@ if export_plots:
 # Write LaTeX code for including plots
 out_str += r"""\section{Unblurred Reference vs Unblurred Current (True Plots)}
 \begin{minipage}{\textwidth}
+\begin{center}
 """
 for i in range(5):
     out_str += r"\includegraphics[height=125pt]{"
     out_str += "dic-plots/"+ref_base+PARAMS[i]+".png}\n"
 
-out_str += r"""\end{minipage}
+out_str += r"""\end{center}
+\end{minipage}
 
 """
 
@@ -226,12 +233,19 @@ ref_t = []
 cur_m = []
 cur_t = []
 
-for m in magnitudes:
+"""for m in magnitudes:
     for t in angles:
         ref_m.append(m)
         ref_t.append(t)
         cur_m.append(m)
         cur_t.append(t)
+for m in magnitudes:
+    for t in angles:
+        ref_m.append(0)
+        ref_t.append(0)
+        cur_m.append(m)
+        cur_t.append(t)"""
+
 for m in magnitudes:
     for t in angles:
         ref_m.append(0)
@@ -261,12 +275,14 @@ for j in range(len(ref_m)):
     # Write LaTeX code for including plots
     out_str += rf"""\section{{Reference (${ref_m[j]}\angle\ang{{{ref_t[j]}}}$ Motion Blur) vs Current (${cur_m[j]}\angle\ang{{{cur_t[j]}}}$ Motion Blur)}}
 \begin{{minipage}}{{\textwidth}}
+\begin{{center}}
 """
     for i in range(5):
         out_str += r"\includegraphics[height=125pt]{"
         out_str += "dic-plots/"+base+PARAMS[i]+".png}\n"
 
-    out_str += r"""
+    out_str += r"""\end{center}
+
 \vspace{12pt}
 
 """
@@ -295,7 +311,7 @@ for j in range(len(ref_m)):
     
     # Put SSIM and PSNR values into the LaTeX table
     for i in range(5):
-        out_str += f"{LATEX_TITLES[i]} & {ssims[i]:.4f} & {psnrs[i]:.4f} \\\\"
+        out_str += f"{TITLES[i]} & {ssims[i]:.4f} & {psnrs[i]:.4f} \\\\"
         if i != 4:
             out_str += "\n"
             

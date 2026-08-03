@@ -1,5 +1,5 @@
 ref_image,cur_image,roi_path,output_prefix
-./images/reference-blurred-bw.jpg,./images/current-blurred-bw.jpg,./images/current-focus-roi.jpg,./outputs/reference-blurred-bw_vs_current-blurred-bw_
-./images/reference-blurred-bw.jpg,./images/current-focus-bw.jpg,./images/current-focus-roi.jpg,./outputs/reference-blurred-bw_vs_current-focus-bw_
-./images/reference-focus-bw.jpg,./images/current-blurred-bw.jpg,./images/current-focus-roi.jpg,./outputs/reference-focus-bw_vs_current-blurred-bw_
-./images/reference-focus-bw.jpg,./images/current-focus-bw.jpg,./images/current-focus-roi.jpg,./outputs/reference-focus-bw_vs_current-focus-bw_
+./images/reference-blurred-bw.jpg,./images/current-blurred-bw.jpg,./images/current-focus-roi.jpg,reference-blurred-bw_vs_current-blurred-bw_
+./images/reference-blurred-bw.jpg,./images/current-focus-bw.jpg,./images/current-focus-roi.jpg,reference-blurred-bw_vs_current-focus-bw_
+./images/reference-focus-bw.jpg,./images/current-blurred-bw.jpg,./images/current-focus-roi.jpg,reference-focus-bw_vs_current-blurred-bw_
+./images/reference-focus-bw.jpg,./images/current-focus-bw.jpg,./images/current-focus-roi.jpg,reference-focus-bw_vs_current-focus-bw_

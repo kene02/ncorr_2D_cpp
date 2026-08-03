@@ -34,7 +34,7 @@ bool save_to_csv(const std::string& filename, const ArrayType& data_array, const
     }
     
     csv_file.close();
-	std::cout << "Successfully exported data to " << filename << std::endl;
+	std::cout << "Successfully exported results to " << filename << std::endl;
     return true;
 }
 
@@ -106,8 +106,8 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 		int width = disp.data_width();
 
 		// Call the function for both u and v arrays
-		save_to_csv(output_base+"u.csv", u_array, disp_roi, height, width);
-		save_to_csv(output_base+"v.csv", v_array, disp_roi, height, width);
+		save_to_csv(output_base+"_u.csv", u_array, disp_roi, height, width);
+		save_to_csv(output_base+"_v.csv", v_array, disp_roi, height, width);
 
 		// Get the strain field you want to access 
 		Strain2D strain = strain_output.strains.back();  
@@ -125,9 +125,9 @@ bool analyze_dic_and_strain(const std::string& ref_image_path,
 		width = strain.data_width();
 
 		// Call the function for eyy, exy, and exx arrays
-		save_to_csv(output_base+"eyy.csv", eyy_array, strain_roi, height, width);
-		save_to_csv(output_base+"exy.csv", exy_array, strain_roi, height, width);
-		save_to_csv(output_base+"exx.csv", exx_array, strain_roi, height, width);
+		save_to_csv(output_base+"_eyy.csv", eyy_array, strain_roi, height, width);
+		save_to_csv(output_base+"_exy.csv", exy_array, strain_roi, height, width);
+		save_to_csv(output_base+"_exx.csv", exx_array, strain_roi, height, width);
 
 		return true;
 	} catch (const std::exception& e) {
@@ -160,51 +160,37 @@ std::string clean_string(std::string str) {
 }
 
 int main() {
-	// Path to CSV file listing image paths 
-	const std::string csv_path = "../image_paths.csv";
-    std::ifstream file(csv_path);
+	const std::string roi_path = "images/roi.png";
 
-    if (!file.is_open()) {
-        std::cerr << "Error: Could not open the file " << csv_path << std::endl;
-        return 1;
-    }
+	// Define the specific list of angles to iterate through
+	const std::vector<int> angles = {0, 5, 15, 30, 45, 60, 75, 85, 90};
+	
+	// Initialize counter and calculate total iterations
+    int counter = 0;
+    const int total_iterations = 180; // 20 'm' steps * 9 't' steps
 
-    std::string line;
-    bool is_header = true; // Set to false if your CSV does not have a header row
+	for (int m = 5; m <= 100; m += 5) {
+		for (int t : angles) {
+			counter++; // Increment on each iteration
 
-    while (std::getline(file, line)) {
-        // Skip empty lines
-        if (line.empty()) continue;
+			std::string suffix = "_t" + std::to_string(t) + ".png";
 
-        // Skip the header row
-        if (is_header) {
-            is_header = false;
-            continue;
-        }
+			std::string ref_image =
+				"images/ohtcfrp_00_m" + std::to_string(m) + suffix;
 
-        std::stringstream ss(line);
-        std::string ref_image, cur_image, roi_path, output_prefix;
+			std::string cur_image =
+				"images/ohtcfrp_11_m0_t0.png";
 
-        // Parse comma-separated fields
-        if (std::getline(ss, ref_image, ',') &&
-            std::getline(ss, cur_image, ',') &&
-            std::getline(ss, roi_path, ',') &&
-            std::getline(ss, output_prefix, ',')) {
+			std::string output_prefix =
+				"outputs/ohtcfrp_00_m" + std::to_string(m) + "_t" + std::to_string(t) +
+				"_vs_ohtcfrp_11_m0_t0";
+			
+			// Print progress line
+            std::cout << "[" << counter << "/" << total_iterations << "] Evaluating " << output_prefix << " ...\n";
+			// Call the function with your specific image paths
+			analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
+		}
+	}
 
-            // Clean any accidental quotes around strings
-            ref_image = clean_string(ref_image);
-            cur_image = clean_string(cur_image);
-            roi_path = clean_string(roi_path);
-            output_prefix = clean_string(output_prefix);
-
-            // Execute the analysis function
-			//std::cout << output_prefix << std::endl;
-            analyze_dic_and_strain(ref_image, cur_image, roi_path, output_prefix);
-        } else {
-            std::cerr << "Warning: Skipping malformed line -> " << line << std::endl;
-        }
-    }
-
-    file.close();
     return 0;
 }
